@@ -101,37 +101,35 @@
         color: #fff;
       }
 
-      /* Yıldız katmanları */
+      /* Arka planı sonsuza dek kaydır */
       .stars, .stars2, .stars3 {
         position: fixed;
         width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
-        background: transparent;
-        display: block;
-        z-index: -1; /* Arkada kalsın */
+        top: 0; left: 0;
+        z-index: -1;
       }
 
       .stars {
         background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png') repeat;
-        animation: moveStars 200s linear infinite;
+        animation: moveBackground 500s linear infinite;
       }
 
       .stars2 {
         background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars2.png') repeat;
-        animation: moveStars 400s linear infinite;
+        animation: moveBackground 800s linear infinite;
       }
 
       .stars3 {
         background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars3.png') repeat;
-        animation: moveStars 600s linear infinite;
+        animation: moveBackground 1200s linear infinite;
       }
 
-      @keyframes moveStars {
-        from { transform: translateY(0); }
-        to { transform: translateY(-1000px); }
+      @keyframes moveBackground {
+        from { background-position: 0 0; }
+        to { background-position: 0 -10000px; }
       }
+
 
       /* Carousel üst boşluğu */
       #myCarousel {
